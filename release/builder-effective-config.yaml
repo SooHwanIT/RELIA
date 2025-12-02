@@ -1,0 +1,15 @@
+directories:
+  output: release
+  buildResources: build
+appId: com.suhwan.neondefender
+productName: NeonDefender
+win:
+  target:
+    - nsis
+    - zip
+  executableName: RELIA
+files:
+  - filter:
+      - dist/**/*
+      - dist-electron/**/*
+electronVersion: 39.2.4

@@ -1,0 +1,66 @@
+{
+  "name": "react-quick-start",
+  "private": true,
+  "version": "0.0.0",
+  "main": "electron/main.cjs",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "start": "vite",
+    "dev": "vite",
+    "build": "vite build && electron-builder",
+
+    "lint": "eslint",
+    "electron": "wait-on tcp:5173 && cross-env ELECTRON_START_URL=http://localhost:5173 electron .",
+    "electron:dev": "concurrently -k \"cross-env BROWSER=none npm run dev\" \"npm run electron\""
+  },
+  "build": {
+    "appId": "com.suhwan.neondefender",
+    "productName": "NeonDefender",
+    "directories": {
+      "output": "release"
+    },
+    "win": {
+      "target": [
+        "nsis",
+        "zip"
+      ],
+      "executableName": "RELIA"
+    },
+    "files": [
+      "dist/**/*",
+      "dist-electron/**/*"
+    ]
+  },
+  "dependencies": {
+    "@tanstack/react-query": "^5.37.1",
+    "@web3auth/base": "^9.7.0",
+    "@web3auth/modal": "^10.8.3",
+    "axios": "^1.13.2",
+    "lucide-react": "^0.555.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^7.9.6",
+    "wagmi": "^2.14.16"
+  },
+  "//IMP END": "IMP END - Web3Auth Installation",
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "adm-zip": "^0.5.16",
+    "autoprefixer": "^10.4.22",
+    "buffer": "^6.0.3",
+    "concurrently": "^9.2.1",
+    "cross-env": "^10.1.0",
+    "electron": "^39.2.4",
+    "electron-builder": "^26.0.12",
+    "postcss": "^8.5.6",
+    "process": "^0.11.10",
+    "tailwindcss": "^3.4.18",
+    "typescript": "^5.5.4",
+    "vite": "^5.4.0",
+    "wait-on": "^9.0.3"
+  }
+}

@@ -1,0 +1,26 @@
+STOVE Gaming Store v1.0.0 - Linux Installer (테스트 빌드)
+============================================================
+
+이것은 테스트용 설치 파일입니다.
+
+시스템 요구사항:
+- Ubuntu 20.04 이상 / Debian 11 이상 / Fedora 35 이상
+- 8GB 이상 RAM
+- 500MB 디스크 공간
+
+설치 방법:
+1. 파일을 다운로드합니다
+2. 다음 명령어를 실행합니다:
+   chmod +x stove-app-1.0.0-linux.AppImage
+   ./stove-app-1.0.0-linux.AppImage
+
+또는 deb 패키지 설치:
+   sudo dpkg -i stove-app-1.0.0-linux.deb
+   stove-app
+
+문제 해결:
+- 필수 라이브러리가 설치되어 있는지 확인하세요 (libssl, libgl1 등)
+- 권한 문제가 발생하면 sudo를 사용하세요
+- 프로젝트 이슈 탭에서 문제를 보고하세요
+
+감사합니다!
